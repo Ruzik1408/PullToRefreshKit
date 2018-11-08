@@ -112,7 +112,7 @@ open class DefaultRefreshHeader: UIView, RefreshableHeader {
         super.init(frame: frame)
         addSubview(spinner)
 //         addSubview(textLabel)
-        addSubview(imageView);
+//        addSubview(imageView);
         let image = UIImage(named: "arrow_down", in: Bundle(for: DefaultRefreshHeader.self), compatibleWith: nil)
         imageView.image = image
         imageView.sizeToFit()
@@ -131,7 +131,7 @@ open class DefaultRefreshHeader: UIView, RefreshableHeader {
     open override func layoutSubviews() {
         super.layoutSubviews()
         imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        imageView.center = CGPoint(x: frame.width/2 - 10, y: frame.size.height/2)
+        imageView.center = CGPoint(x: frame.width/2, y: frame.size.height/2)
         spinner.center = imageView.center
         textLabel.center = CGPoint(x: frame.size.width/2, y: frame.size.height/2);
     }
