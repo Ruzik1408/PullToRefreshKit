@@ -117,7 +117,7 @@ open class DefaultRefreshFooter:UIView, RefreshableFooter{
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(spinner)
-        addSubview(textLabel)
+//         addSubview(textLabel)
         textDic[.pullToRefresh] = PullToRefreshKitFooterString.pullUpToRefresh
         textDic[.refreshing] = PullToRefreshKitFooterString.refreshing
         textDic[.noMoreData] = PullToRefreshKitFooterString.noMoreData
@@ -132,7 +132,7 @@ open class DefaultRefreshFooter:UIView, RefreshableFooter{
     open override func layoutSubviews() {
         super.layoutSubviews()
         textLabel.center = CGPoint(x: frame.size.width/2, y: frame.size.height/2);
-        spinner.center = CGPoint(x: frame.width/2 - 70 - 20, y: frame.size.height/2)
+        spinner.center = CGPoint(x: frame.width/2, y: frame.size.height/2)
     }
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
