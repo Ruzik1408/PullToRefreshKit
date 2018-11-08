@@ -112,7 +112,7 @@ open class DefaultRefreshHeader: UIView, RefreshableHeader {
         super.init(frame: frame)
         addSubview(spinner)
 //         addSubview(textLabel)
-//        addSubview(imageView);
+        addSubview(imageView);
         let image = UIImage(named: "arrow_down", in: Bundle(for: DefaultRefreshHeader.self), compatibleWith: nil)
         imageView.image = image
         imageView.sizeToFit()
